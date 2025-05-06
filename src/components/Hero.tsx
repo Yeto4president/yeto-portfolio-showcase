@@ -15,14 +15,14 @@ const Hero = () => {
             <div>
               <p className="text-theme-primary font-medium mb-2">Bonjour, je suis</p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">
-                Yeto
+                Jonathan
               </h1>
               <h2 className="text-3xl sm:text-4xl text-theme-secondary font-bold mb-4">
-                Développeur Logiciel
+                Big Data & Machine Learning
               </h2>
               <p className="text-gray-300 text-lg max-w-xl">
-                Je crée des applications web réactives, des bots Discord et d'autres solutions logicielles. 
-                Consultez mes projets ci-dessous pour voir ce que j'ai développé.
+                Étudiant en 3ème année d'Ingénierie Informatique à EFREI Paris, 
+                je recherche un stage de 20 semaines en Big Data et Machine Learning à partir du 4 novembre 2025.
               </p>
             </div>
             
@@ -44,7 +44,7 @@ const Hero = () => {
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-theme-primary/20">
               <div className="absolute inset-0 bg-gradient-to-br from-theme-primary/40 to-theme-secondary/40 backdrop-blur-sm"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-white">Y</div>
+              <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-white">J</div>
             </div>
           </div>
         </div>

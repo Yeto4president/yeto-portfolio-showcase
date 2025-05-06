@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Link } from 'lucide-react';
@@ -17,61 +18,61 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "CSC-Helper",
-      description: "Un bot Discord qui aide les étudiants en informatique avec des ressources et des informations sur les cours CSC.",
-      image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1974&auto=format&fit=crop",
-      technologies: ["JavaScript", "Discord.js", "Node.js"],
-      category: ["bot", "web"],
-      githubUrl: "https://github.com/Yeto4president/CSC-Helper"
+      title: "Iris Classification Project",
+      description: "Implémentation et comparaison entre plusieurs algorithmes de machine learning pour classifier le célèbre dataset Iris flower.",
+      image: "https://images.unsplash.com/photo-1545231097-cbd796f1e0a6?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "Jupyter Notebook", "scikit-learn"],
+      category: ["ml", "data"],
+      githubUrl: "https://github.com/Yeto4president/Iris-Classification-Project"
     },
     {
       id: 2,
-      title: "LLM Bot",
-      description: "Un bot utilisant les modèles de langage avancés pour fournir des réponses intelligentes aux utilisateurs.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
-      technologies: ["Python", "API", "AI/ML"],
-      category: ["bot", "ai"],
-      githubUrl: "https://github.com/Yeto4president/LLM_Bot"
+      title: "Agenda",
+      description: "Projet de gestion de calendrier avec recherche et organisation optimisées.",
+      image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2068&auto=format&fit=crop",
+      technologies: ["C"],
+      category: ["app"],
+      githubUrl: "https://github.com/Yeto4president/Agenda"
     },
     {
       id: 3,
-      title: "ASPM",
-      description: "Application de gestion de projets académiques pour les étudiants et professeurs.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2048&auto=format&fit=crop",
-      technologies: ["Java", "JavaFX", "SQLite"],
-      category: ["app", "desktop"],
-      githubUrl: "https://github.com/Yeto4president/ASPM"
+      title: "Projet Vector Text-based Editor",
+      description: "Projet de dessin pour ajouter, afficher et manipuler des formes géométriques à l'aide de commandes.",
+      image: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=1974&auto=format&fit=crop",
+      technologies: ["C"],
+      category: ["app"],
+      githubUrl: "https://github.com/Yeto4president/Projet_Vector-_Text_based_Editor"
     },
     {
       id: 4,
-      title: "Mexican-Standoff",
-      description: "Un jeu multi-joueurs basé sur le concept du Mexican Standoff, développé en Java.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["Java", "Game Development", "Multiplayer"],
-      category: ["game"],
-      githubUrl: "https://github.com/Yeto4president/Mexican-Standoff",
+      title: "Tournoi JDP",
+      description: "Un système de base de données robuste pour organiser et suivre des tournois de jeux de société.",
+      image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?q=80&w=2071&auto=format&fit=crop",
+      technologies: ["SQL", "Database Design"],
+      category: ["db"],
+      githubUrl: "https://github.com/Yeto4president/Tournoi_JDP-"
     },
     {
       id: 5,
-      title: "Atlas-Global",
-      description: "Application interactive pour explorer des données géographiques et culturelles du monde entier.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["JavaScript", "React", "API GIS"],
+      title: "Ybox",
+      description: "Application web pour le streaming de musique.",
+      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["HTML", "CSS", "JavaScript"],
       category: ["web"],
-      githubUrl: "https://github.com/Yeto4president/Atlas-Global",
+      githubUrl: "https://github.com/Yeto4president/Ybox"
     },
     {
       id: 6,
-      title: "AOTP",
-      description: "Plateforme d'apprentissage en ligne pour les étudiants en informatique.",
-      image: "https://images.unsplash.com/photo-1587573089284-77b9e3e00c7e?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["Python", "Django", "PostgreSQL"],
-      category: ["web", "fullstack"],
-      githubUrl: "https://github.com/Yeto4president/AOTP",
+      title: "Data Analysis Project",
+      description: "Utilisation de l'ACP pour analyser la production de protéines animales en Éthiopie, les émissions de GES et l'intensité des émissions.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "Jupyter Notebook", "Data Analysis", "PCA"],
+      category: ["data", "ml"],
+      githubUrl: "https://github.com/Yeto4president/Data-analysis-project"
     },
   ];
 
-  const categories = ["all", "web", "game", "bot", "fullstack"];
+  const categories = ["all", "data", "ml", "web", "app", "db"];
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
@@ -105,7 +106,12 @@ const Projects = () => {
               }`}
               onClick={() => setActiveCategory(category)}
             >
-              {category}
+              {category === "ml" ? "Machine Learning" : 
+               category === "db" ? "Base de données" :
+               category === "all" ? "Tous" : 
+               category === "data" ? "Analyse de données" : 
+               category === "app" ? "Applications" : 
+               category === "web" ? "Web" : category}
             </Button>
           ))}
         </div>

@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Code, User, Briefcase } from 'lucide-react';
+import { Code, User, Briefcase, Laptop } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { category: "Programmation", items: ["Java", "Python", "JavaScript", "TypeScript", "HTML/CSS"] },
-    { category: "Technologies", items: ["React", "Node.js", "Django", "Discord.js", "JavaFX"] },
-    { category: "Outils", items: ["Git", "GitHub", "VS Code", "Docker", "SQLite", "PostgreSQL"] },
+    { category: "Langages", items: ["Python", "Java", "C", "JavaScript", "HTML/CSS", "SQL", "Bash"] },
+    { category: "Technologies", items: ["React", "Node.js", "Express", "Vue.js", "scikit-learn", "MATLAB"] },
+    { category: "Outils", items: ["Git", "MySQL", "MSSQL", "Linux", "Figma"] },
   ];
 
   return (
@@ -28,9 +28,9 @@ const About = () => {
               <h3 className="text-xl font-bold">Qui je suis</h3>
             </div>
             <p className="text-gray-300">
-              Je suis un développeur passionné spécialisé dans la création d'applications web, de bots Discord
-              et de logiciels desktop. Mon parcours en programmation a commencé par des projets simples et s'est 
-              développé vers la création d'applications complexes qui résolvent des problèmes réels.
+              Je suis Jonathan, un étudiant en 3ème année d'Ingénierie Informatique à EFREI Paris, passionné par 
+              le Big Data et le Machine Learning. Curieux et motivé, j'aime transformer des données en informations 
+              exploitables et construire des modèles prédictifs pour résoudre des problèmes concrets avec des solutions évolutives.
             </p>
           </div>
 
@@ -42,9 +42,9 @@ const About = () => {
               <h3 className="text-xl font-bold">Ce que je fais</h3>
             </div>
             <p className="text-gray-300">
-              Je me spécialise dans le développement d'applications web, de bots Discord et de solutions logicielles variées.
-              Je mets l'accent sur la création de code propre et efficace qui offre une expérience utilisateur optimale.
-              J'aime relever des défis techniques qui me permettent de perfectionner mes compétences.
+              Je me spécialise dans l'analyse de données, le développement de modèles d'apprentissage automatique et 
+              la création de solutions logicielles. J'ai une solide base en programmation avec plusieurs langages et 
+              technologies, avec une forte affinité pour Python et les bibliothèques d'analyse de données et de machine learning.
             </p>
           </div>
 
@@ -53,12 +53,12 @@ const About = () => {
               <div className="bg-theme-primary rounded-full p-2 mr-4">
                 <Briefcase size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold">Mon expérience</h3>
+              <h3 className="text-xl font-bold">Mon parcours</h3>
             </div>
             <p className="text-gray-300">
-              J'ai travaillé sur divers projets, allant des applications personnelles aux efforts collaboratifs.
-              Chaque projet a contribué à mon développement en tant que programmeur et a élargi ma compréhension
-              des différentes technologies et pratiques de développement.
+              Actuellement en 3ème année à EFREI Paris, je recherche un stage de 20 semaines en Big Data et 
+              Machine Learning débutant le 4 novembre 2025. Mon parcours académique m'a permis de développer des 
+              compétences techniques solides et une passion pour l'exploitation des données à grande échelle.
             </p>
           </div>
         </div>

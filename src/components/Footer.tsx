@@ -11,9 +11,9 @@ const Footer = () => {
       <div className="container mx-auto py-10 px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <Link to="/" className="text-xl font-bold text-gradient mb-4 inline-block">Yeto</Link>
+            <Link to="/" className="text-xl font-bold text-gradient mb-4 inline-block">Jonathan</Link>
             <p className="text-gray-300">
-              Développement de solutions logicielles innovantes et concrétisation d'idées à travers le code.
+              Passionné par le Big Data et le Machine Learning, je cherche à transformer les données en insights et à résoudre des problèmes du monde réel.
             </p>
             <div className="flex gap-4 mt-4">
               <a 
@@ -25,7 +25,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:contact@yeto.com" 
+                href="mailto:jonathan.ayeto@efrei.net" 
                 className="text-gray-400 hover:text-theme-primary transition"
               >
                 <Mail size={20} />
@@ -52,19 +52,20 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Catégories de projets</h3>
+            <h3 className="text-lg font-bold mb-4">Domaines d'expertise</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Applications Web</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Bots Discord</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Jeux</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Applications Java</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Big Data</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Machine Learning</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Data Analysis</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Python</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Web Dev</span>
             </div>
           </div>
         </div>
         
         <div className="mt-10 pt-6 border-t border-white/5 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Yeto. Tous droits réservés.
+            © {currentYear} Jonathan. Tous droits réservés.
           </p>
         </div>
       </div>
