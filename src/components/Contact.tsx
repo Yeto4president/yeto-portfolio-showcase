@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Mail, Github, User } from 'lucide-react';
@@ -8,21 +9,21 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold mb-2">
-            Get In <span className="text-gradient">Touch</span>
+            Contactez-<span className="text-gradient">moi</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-theme-primary to-theme-secondary mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+            N'hésitez pas à me contacter si vous cherchez un développeur, avez une question ou souhaitez simplement échanger.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="glass-effect rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
+            <h3 className="text-2xl font-bold mb-6">Envoyez-moi un message</h3>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm font-medium">
-                  Your Name
+                  Votre nom
                 </label>
                 <div className="relative">
                   <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
@@ -32,14 +33,14 @@ const Contact = () => {
                     type="text"
                     id="name"
                     className="bg-theme-dark/30 border border-white/10 text-white rounded-lg focus:ring-theme-primary focus:border-theme-primary block w-full pl-10 p-2.5"
-                    placeholder="John Doe"
+                    placeholder="Jean Dupont"
                     required
                   />
                 </div>
               </div>
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium">
-                  Your Email
+                  Votre email
                 </label>
                 <div className="relative">
                   <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
@@ -49,35 +50,35 @@ const Contact = () => {
                     type="email"
                     id="email"
                     className="bg-theme-dark/30 border border-white/10 text-white rounded-lg focus:ring-theme-primary focus:border-theme-primary block w-full pl-10 p-2.5"
-                    placeholder="your@email.com"
+                    placeholder="votre@email.com"
                     required
                   />
                 </div>
               </div>
               <div>
                 <label htmlFor="message" className="block mb-2 text-sm font-medium">
-                  Your Message
+                  Votre message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
                   className="bg-theme-dark/30 border border-white/10 text-white rounded-lg focus:ring-theme-primary focus:border-theme-primary block w-full p-2.5"
-                  placeholder="How can I help you?"
+                  placeholder="Comment puis-je vous aider ?"
                   required
                 ></textarea>
               </div>
               <Button className="bg-theme-primary hover:bg-theme-primary/90 text-white w-full">
-                Send Message
+                Envoyer le message
               </Button>
             </form>
           </div>
 
           <div className="glass-effect rounded-lg p-8 flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">Informations de contact</h3>
               <p className="text-gray-300 mb-8">
-                I'm currently available for freelance work and job opportunities. 
-                Feel free to reach out if you have a project that needs some attention.
+                Je suis actuellement disponible pour des missions freelance et des opportunités professionnelles.
+                N'hésitez pas à me contacter si vous avez un projet qui nécessite mon expertise.
               </p>
 
               <div className="space-y-4">
@@ -113,7 +114,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-12 pt-8 border-t border-white/10">
-              <h4 className="font-medium text-xl mb-4">Let's connect</h4>
+              <h4 className="font-medium text-xl mb-4">Connectons-nous</h4>
               <div className="flex gap-4">
                 <a 
                   href="https://github.com/Yeto4president" 

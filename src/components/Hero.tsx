@@ -13,27 +13,27 @@ const Hero = () => {
             style={{animation: 'fade-in 0.7s ease-out'}}
           >
             <div>
-              <p className="text-theme-primary font-medium mb-2">Hello, I'm</p>
+              <p className="text-theme-primary font-medium mb-2">Bonjour, je suis</p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">
                 Yeto
               </h1>
               <h2 className="text-3xl sm:text-4xl text-theme-secondary font-bold mb-4">
-                Software Developer
+                Développeur Logiciel
               </h2>
               <p className="text-gray-300 text-lg max-w-xl">
-                I create responsive web applications, discord bots, and other software solutions. 
-                Check out my projects below to see what I've built.
+                Je crée des applications web réactives, des bots Discord et d'autres solutions logicielles. 
+                Consultez mes projets ci-dessous pour voir ce que j'ai développé.
               </p>
             </div>
             
             <div className="flex flex-wrap gap-4">
               <Button className="bg-theme-primary hover:bg-theme-primary/90 text-white">
                 <a href="#projects" className="flex items-center gap-2">
-                  View Projects <ArrowRight size={16} />
+                  Voir mes projets <ArrowRight size={16} />
                 </a>
               </Button>
               <Button variant="outline" className="border-theme-primary text-theme-primary hover:bg-theme-primary/10">
-                <a href="#contact">Contact Me</a>
+                <a href="#contact">Me contacter</a>
               </Button>
             </div>
           </div>

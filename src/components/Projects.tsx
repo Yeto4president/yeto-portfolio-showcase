@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Link } from 'lucide-react';
@@ -18,59 +17,57 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Minecraft Clone",
-      description: "A simplified Minecraft clone built using JavaScript and Three.js. Features block placement, removal, and movement in a 3D environment.",
-      image: "https://images.unsplash.com/photo-1587573089284-77b9e3e00c7e?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["JavaScript", "Three.js", "HTML5", "CSS3"],
-      category: ["web", "game"],
-      githubUrl: "https://github.com/Yeto4president/minecraft-js"
+      title: "CSC-Helper",
+      description: "Un bot Discord qui aide les étudiants en informatique avec des ressources et des informations sur les cours CSC.",
+      image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1974&auto=format&fit=crop",
+      technologies: ["JavaScript", "Discord.js", "Node.js"],
+      category: ["bot", "web"],
+      githubUrl: "https://github.com/Yeto4president/CSC-Helper"
     },
     {
       id: 2,
-      title: "Discord Music Bot",
-      description: "A discord music bot that allows users to play music in voice channels with various commands and features.",
-      image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1974&auto=format&fit=crop",
-      technologies: ["JavaScript", "Discord.js", "Node.js"],
-      category: ["bot"],
-      githubUrl: "https://github.com/Yeto4president/Music-Bot"
+      title: "LLM Bot",
+      description: "Un bot utilisant les modèles de langage avancés pour fournir des réponses intelligentes aux utilisateurs.",
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
+      technologies: ["Python", "API", "AI/ML"],
+      category: ["bot", "ai"],
+      githubUrl: "https://github.com/Yeto4president/LLM_Bot"
     },
     {
       id: 3,
-      title: "Social Media App",
-      description: "A full-stack social media application with user authentication, posting, commenting, and more.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      category: ["web", "fullstack"],
-      githubUrl: "https://github.com/Yeto4president/",
-      liveUrl: "#"
+      title: "ASPM",
+      description: "Application de gestion de projets académiques pour les étudiants et professeurs.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2048&auto=format&fit=crop",
+      technologies: ["Java", "JavaFX", "SQLite"],
+      category: ["app", "desktop"],
+      githubUrl: "https://github.com/Yeto4president/ASPM"
     },
     {
       id: 4,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing my projects and skills.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2048&auto=format&fit=crop",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      category: ["web"],
-      githubUrl: "https://github.com/Yeto4president/",
-      liveUrl: "#"
+      title: "Mexican-Standoff",
+      description: "Un jeu multi-joueurs basé sur le concept du Mexican Standoff, développé en Java.",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Java", "Game Development", "Multiplayer"],
+      category: ["game"],
+      githubUrl: "https://github.com/Yeto4president/Mexican-Standoff",
     },
     {
       id: 5,
-      title: "E-commerce Platform",
-      description: "An online store with product listings, cart functionality, and checkout process.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      category: ["web", "fullstack"],
-      githubUrl: "https://github.com/Yeto4president/",
+      title: "Atlas-Global",
+      description: "Application interactive pour explorer des données géographiques et culturelles du monde entier.",
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["JavaScript", "React", "API GIS"],
+      category: ["web"],
+      githubUrl: "https://github.com/Yeto4president/Atlas-Global",
     },
     {
       id: 6,
-      title: "Weather App",
-      description: "A weather application that provides current weather data and forecasts for locations worldwide.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["JavaScript", "React", "Weather API"],
-      category: ["web"],
-      githubUrl: "https://github.com/Yeto4president/",
+      title: "AOTP",
+      description: "Plateforme d'apprentissage en ligne pour les étudiants en informatique.",
+      image: "https://images.unsplash.com/photo-1587573089284-77b9e3e00c7e?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "Django", "PostgreSQL"],
+      category: ["web", "fullstack"],
+      githubUrl: "https://github.com/Yeto4president/AOTP",
     },
   ];
 
@@ -87,12 +84,12 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold mb-2">
-            My <span className="text-gradient">Projects</span>
+            Mes <span className="text-gradient">Projets</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-theme-primary to-theme-secondary mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on. Each project has helped me develop
-            my skills and explore different technologies.
+            Voici quelques-uns des projets sur lesquels j'ai travaillé. Chaque projet m'a aidé à développer
+            mes compétences et à explorer différentes technologies.
           </p>
         </div>
 

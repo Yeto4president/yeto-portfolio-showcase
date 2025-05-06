@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="text-xl font-bold text-gradient mb-4 inline-block">Yeto</Link>
             <p className="text-gray-300">
-              Building innovative software solutions and bringing ideas to life through code.
+              Développement de solutions logicielles innovantes et concrétisation d'idées à travers le code.
             </p>
             <div className="flex gap-4 mt-4">
               <a 
@@ -34,16 +34,16 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4">Liens rapides</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-theme-primary transition">Home</Link>
+                <Link to="/" className="text-gray-300 hover:text-theme-primary transition">Accueil</Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-theme-primary transition">About</a>
+                <a href="#about" className="text-gray-300 hover:text-theme-primary transition">À propos</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-300 hover:text-theme-primary transition">Projects</a>
+                <a href="#projects" className="text-gray-300 hover:text-theme-primary transition">Projets</a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-300 hover:text-theme-primary transition">Contact</a>
@@ -52,19 +52,19 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Project Categories</h3>
+            <h3 className="text-lg font-bold mb-4">Catégories de projets</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Web Apps</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Discord Bots</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Games</span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Fullstack</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Applications Web</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Bots Discord</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Jeux</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm">Applications Java</span>
             </div>
           </div>
         </div>
         
         <div className="mt-10 pt-6 border-t border-white/5 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Yeto. All rights reserved.
+            © {currentYear} Yeto. Tous droits réservés.
           </p>
         </div>
       </div>

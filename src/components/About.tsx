@@ -4,9 +4,9 @@ import { Code, User, Briefcase } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { category: "Frontend", items: ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Express", "Python", "Java"] },
-    { category: "Tools", items: ["Git", "GitHub", "VS Code", "Discord API"] },
+    { category: "Programmation", items: ["Java", "Python", "JavaScript", "TypeScript", "HTML/CSS"] },
+    { category: "Technologies", items: ["React", "Node.js", "Django", "Discord.js", "JavaFX"] },
+    { category: "Outils", items: ["Git", "GitHub", "VS Code", "Docker", "SQLite", "PostgreSQL"] },
   ];
 
   return (
@@ -14,7 +14,7 @@ const About = () => {
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold mb-2">
-            About <span className="text-gradient">Me</span>
+            À propos <span className="text-gradient">de moi</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-theme-primary to-theme-secondary mx-auto"></div>
         </div>
@@ -25,12 +25,12 @@ const About = () => {
               <div className="bg-theme-primary rounded-full p-2 mr-4">
                 <User size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold">Who I Am</h3>
+              <h3 className="text-xl font-bold">Qui je suis</h3>
             </div>
             <p className="text-gray-300">
-              I'm a passionate software developer with a keen interest in creating useful applications
-              and tools. My journey in coding started with small projects and has evolved into
-              building complex applications that solve real-world problems.
+              Je suis un développeur passionné spécialisé dans la création d'applications web, de bots Discord
+              et de logiciels desktop. Mon parcours en programmation a commencé par des projets simples et s'est 
+              développé vers la création d'applications complexes qui résolvent des problèmes réels.
             </p>
           </div>
 
@@ -39,12 +39,12 @@ const About = () => {
               <div className="bg-theme-primary rounded-full p-2 mr-4">
                 <Code size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold">What I Do</h3>
+              <h3 className="text-xl font-bold">Ce que je fais</h3>
             </div>
             <p className="text-gray-300">
-              I specialize in building web applications, Discord bots, and other software solutions.
-              My focus is on creating clean, efficient code that delivers a seamless user experience. 
-              I enjoy taking on challenging projects that push my skills to new heights.
+              Je me spécialise dans le développement d'applications web, de bots Discord et de solutions logicielles variées.
+              Je mets l'accent sur la création de code propre et efficace qui offre une expérience utilisateur optimale.
+              J'aime relever des défis techniques qui me permettent de perfectionner mes compétences.
             </p>
           </div>
 
@@ -53,18 +53,18 @@ const About = () => {
               <div className="bg-theme-primary rounded-full p-2 mr-4">
                 <Briefcase size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold">My Experience</h3>
+              <h3 className="text-xl font-bold">Mon expérience</h3>
             </div>
             <p className="text-gray-300">
-              I've worked on a variety of projects, from personal applications to collaborative efforts.
-              Each project has contributed to my growth as a developer and expanded my understanding
-              of different technologies and development practices.
+              J'ai travaillé sur divers projets, allant des applications personnelles aux efforts collaboratifs.
+              Chaque projet a contribué à mon développement en tant que programmeur et a élargi ma compréhension
+              des différentes technologies et pratiques de développement.
             </p>
           </div>
         </div>
 
         <div className="mt-16">
-          <h3 className="text-2xl font-bold mb-6 text-center">My Skills</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center">Mes compétences</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skillGroup, index) => (
               <div key={index} className="glass-effect rounded-lg p-6">
