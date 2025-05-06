@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { GitHub, Link } from 'lucide-react';
+import { Github, Link } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -152,7 +152,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-sm text-theme-primary hover:text-theme-secondary transition"
                   >
-                    <GitHub size={16} /> Code
+                    <Github size={16} /> Code
                   </a>
                   {project.liveUrl && (
                     <a 

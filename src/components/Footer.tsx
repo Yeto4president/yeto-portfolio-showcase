@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GitHub, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-theme-primary transition"
               >
-                <GitHub size={20} />
+                <Github size={20} />
               </a>
               <a 
                 href="mailto:contact@yeto.com" 

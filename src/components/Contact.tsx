@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Mail, GitHub, User } from 'lucide-react';
+import { Mail, Github, User } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -96,7 +95,7 @@ const Contact = () => {
 
                 <div className="flex items-start">
                   <div className="bg-theme-primary rounded-full p-2 mr-4 mt-1">
-                    <GitHub size={20} className="text-white" />
+                    <Github size={20} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">GitHub</h4>
@@ -122,7 +121,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="bg-theme-dark/30 hover:bg-theme-primary/20 border border-white/10 rounded-full p-3 transition"
                 >
-                  <GitHub size={20} />
+                  <Github size={20} />
                 </a>
                 <a 
                   href="mailto:contact@yeto.com" 

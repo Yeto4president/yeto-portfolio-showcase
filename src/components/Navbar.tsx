@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, GitHub } from 'lucide-react';
+import { Menu, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="hover:text-theme-primary transition"
           >
-            <GitHub size={20} />
+            <Github size={20} />
           </a>
         </div>
         
@@ -93,7 +93,7 @@ const Navbar = () => {
               className="text-white hover:text-theme-primary py-2 flex items-center gap-2 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <GitHub size={18} /> GitHub
+              <Github size={18} /> GitHub
             </a>
           </div>
         </div>
