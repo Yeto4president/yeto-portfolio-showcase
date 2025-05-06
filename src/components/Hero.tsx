@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Hero = () => {
   return (
@@ -43,8 +44,11 @@ const Hero = () => {
             style={{animation: 'fade-in 1s ease-out'}}
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-theme-primary/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-theme-primary/40 to-theme-secondary/40 backdrop-blur-sm"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-white">J</div>
+              {/* Pour ajouter votre photo, téléchargez-la dans le projet et remplacez "YOUR_PHOTO_URL" ci-dessous */}
+              <Avatar className="w-full h-full">
+                <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Jonathan" className="object-cover w-full h-full" />
+                <AvatarFallback className="w-full h-full text-6xl font-bold text-white bg-gradient-to-br from-theme-primary/40 to-theme-secondary/40">J</AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>

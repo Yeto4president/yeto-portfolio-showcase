@@ -20,7 +20,7 @@ const Projects = () => {
       id: 1,
       title: "Iris Classification Project",
       description: "Implémentation et comparaison entre plusieurs algorithmes de machine learning pour classifier le célèbre dataset Iris flower.",
-      image: "https://images.unsplash.com/photo-1545231097-cbd796f1e0a6?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       technologies: ["Python", "Jupyter Notebook", "scikit-learn"],
       category: ["ml", "data"],
       githubUrl: "https://github.com/Yeto4president/Iris-Classification-Project"

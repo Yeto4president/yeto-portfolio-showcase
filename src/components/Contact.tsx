@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Mail, Linkedin } from 'lucide-react';
 
 const Contact = () => {
@@ -13,7 +12,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-theme-primary to-theme-secondary mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            N'hésitez pas à me contacter si vous souhaitez échanger sur des opportunités dans le domaine du Big Data et du Machine Learning, discuter de projets ou simplement partager des connaissances dans ce domaine.
+            N'hésitez pas à me contacter si vous cherchez un développeur spécialisé en Big Data et Machine Learning, avez une question ou souhaitez simplement échanger sur le domaine.
           </p>
         </div>
 
