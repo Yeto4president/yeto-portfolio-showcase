@@ -18,58 +18,103 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Iris Classification Project",
-      description: "Implémentation et comparaison entre plusieurs algorithmes de machine learning pour classifier le célèbre dataset Iris flower.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      technologies: ["Python", "Jupyter Notebook", "scikit-learn"],
-      category: ["ml", "data"],
-      githubUrl: "https://github.com/Yeto4president/Iris-Classification-Project"
+      title: "BinVision Monitor - La Ploubelle",
+      description: "Plateforme IA de gestion des déchets utilisant l'analyse d'images pour surveiller le niveau de remplissage des poubelles publiques et prévenir les dépôts illégaux.",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "Computer Vision", "AI", "Machine Learning"],
+      category: ["ml", "data", "app"],
+      githubUrl: "https://github.com/Yeto4president/binvision-monitor-La-Ploubelle-"
     },
     {
       id: 2,
-      title: "Agenda",
-      description: "Projet de gestion de calendrier avec recherche et organisation optimisées.",
-      image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2068&auto=format&fit=crop",
-      technologies: ["C"],
-      category: ["app"],
-      githubUrl: "https://github.com/Yeto4president/Agenda"
+      title: "ANSSI Vulnerability Intelligence",
+      description: "Collecte automatisée, enrichissement et visualisation des bulletins de vulnérabilités ANSSI. Extraction des CVE, récupération des scores EPSS et génération d'insights priorisés par risque.",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Jupyter Notebook", "Data Analysis", "Security", "Python"],
+      category: ["data", "ml"],
+      githubUrl: "https://github.com/Yeto4president/Anssi-vulnerability-intelligence"
     },
     {
       id: 3,
-      title: "Projet Vector Text-based Editor",
-      description: "Projet de dessin pour ajouter, afficher et manipuler des formes géométriques à l'aide de commandes.",
-      image: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=1974&auto=format&fit=crop",
-      technologies: ["C"],
-      category: ["app"],
-      githubUrl: "https://github.com/Yeto4president/Projet_Vector-_Text_based_Editor"
+      title: "SahelSafe",
+      description: "Projet de machine learning visant à prédire les zones et périodes à haut risque d'attentats terroristes au Burkina Faso, utilisant les données ouvertes ACLED.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["HTML", "Machine Learning", "Data Analysis", "Python"],
+      category: ["ml", "data"],
+      githubUrl: "https://github.com/Yeto4president/SahelSafe"
     },
     {
       id: 4,
-      title: "Tournoi JDP",
-      description: "Un système de base de données robuste pour organiser et suivre des tournois de jeux de société.",
-      image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?q=80&w=2071&auto=format&fit=crop",
-      technologies: ["SQL", "Database Design"],
-      category: ["db"],
-      githubUrl: "https://github.com/Yeto4president/Tournoi_JDP-"
+      title: "BasketStatIQ",
+      description: "Débloquer les insights de la NBA grâce à la data science. Analyse avancée des statistiques NBA avec visualisations interactives.",
+      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Jupyter Notebook", "Data Science", "Python", "Pandas"],
+      category: ["data", "ml"],
+      githubUrl: "https://github.com/Yeto4president/BasketStatIQ"
     },
     {
       id: 5,
-      title: "Ybox",
-      description: "Application web pour le streaming de musique.",
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      category: ["web"],
-      githubUrl: "https://github.com/Yeto4president/Ybox"
+      title: "AI Game Algorithms",
+      description: "Implémentation d'IA de jeux avancées utilisant Minimax avec élagage Alpha-Beta pour créer des adversaires intelligents.",
+      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "AI", "Algorithms", "Game Theory"],
+      category: ["ml", "app"],
+      githubUrl: "https://github.com/Yeto4president/AI-Game-Algorithms"
     },
     {
       id: 6,
-      title: "Data Analysis Project",
-      description: "Utilisation de l'ACP pour analyser la production de protéines animales en Éthiopie, les émissions de GES et l'intensité des émissions.",
+      title: "Weather Data Pipeline",
+      description: "Pipeline pour récupérer et afficher les données météorologiques avec traitement en temps réel et visualisations.",
+      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "Data Pipeline", "API", "Real-time"],
+      category: ["data", "app"],
+      githubUrl: "https://github.com/Yeto4president/weather-data-pipeline"
+    },
+    {
+      id: 7,
+      title: "The Board Game Challenge",
+      description: "Plateforme interactive pour les jeux de société avec gestion des tournois et statistiques avancées.",
+      image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?q=80&w=2071&auto=format&fit=crop",
+      technologies: ["JavaScript", "Web Development", "Interactive UI"],
+      category: ["web", "app"],
+      githubUrl: "https://github.com/Yeto4president/The-Board-Game-Challenge"
+    },
+    {
+      id: 8,
+      title: "Finite Automata & Rational Expressions",
+      description: "Projet d'automates finis : lecture, vérification, standardisation, déterminisation, minimisation et reconnaissance de mots.",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Python", "Computer Science", "Algorithms", "Theory"],
+      category: ["app"],
+      githubUrl: "https://github.com/Yeto4president/Finite-Automata-and-Rational-Expressions-project"
+    },
+    {
+      id: 9,
+      title: "Scheduling Graph",
+      description: "Analyse et ordonnancement de tâches utilisant un tableau de contraintes. Construction de graphe orienté, détection de circuits, calcul du chemin critique et visualisation.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      technologies: ["Python", "Jupyter Notebook", "Data Analysis", "PCA"],
+      technologies: ["Python", "Graph Theory", "Algorithms", "Optimization"],
+      category: ["data", "app"],
+      githubUrl: "https://github.com/Yeto4president/Scheduling_Graph"
+    },
+    {
+      id: 10,
+      title: "Data Analysis Project - Ethiopia",
+      description: "Utilisation de l'ACP pour analyser la production de protéines animales en Éthiopie, les émissions de GES et l'intensité des émissions de 2010-2020.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Jupyter Notebook", "Python", "PCA", "Data Analysis"],
       category: ["data", "ml"],
       githubUrl: "https://github.com/Yeto4president/Data-analysis-project"
     },
+    {
+      id: 11,
+      title: "Iris Classification Project",
+      description: "Implémentation et comparaison entre plusieurs algorithmes de machine learning pour classifier le célèbre dataset Iris flower.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+      technologies: ["Jupyter Notebook", "Python", "scikit-learn", "ML"],
+      category: ["ml", "data"],
+      githubUrl: "https://github.com/Yeto4president/Iris-Classification-Project"
+    }
   ];
 
   const categories = ["all", "data", "ml", "web", "app", "db"];

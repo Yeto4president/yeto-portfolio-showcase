@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import TypingAnimation from './TypingAnimation';
 
 const Hero = () => {
   return (
@@ -19,7 +20,14 @@ const Hero = () => {
                 Jonathan
               </h1>
               <h2 className="text-3xl sm:text-4xl text-theme-secondary font-bold mb-4">
-                Big Data & Machine Learning
+                <TypingAnimation 
+                  texts={[
+                    "Big Data & Machine Learning",
+                    "Data Science Enthusiast",
+                    "AI Developer",
+                    "Business Intelligence"
+                  ]}
+                />
               </h2>
               <p className="text-gray-300 text-lg max-w-xl">
                 Étudiant en 3ème année d'Ingénierie Informatique à EFREI Paris, 
@@ -45,7 +53,7 @@ const Hero = () => {
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-theme-primary/20">
               <Avatar className="w-full h-full">
-                <AvatarImage src="/lovable-uploads/63a6f1b2-24c3-4104-95e0-815cf1b13b47.png" alt="Jonathan" className="object-cover w-full h-full" />
+                <AvatarImage src="/profile-photo.png" alt="Jonathan" className="object-cover w-full h-full" />
                 <AvatarFallback className="w-full h-full text-6xl font-bold text-white bg-gradient-to-br from-theme-primary/40 to-theme-secondary/40">J</AvatarFallback>
               </Avatar>
             </div>
