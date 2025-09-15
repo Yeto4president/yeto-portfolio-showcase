@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Code, User, Briefcase, Laptop } from 'lucide-react';
+import InteractiveSkills from './InteractiveSkills';
 
 const About = () => {
   const skills = [
@@ -28,9 +29,10 @@ const About = () => {
               <h3 className="text-xl font-bold">Qui je suis</h3>
             </div>
             <p className="text-gray-300">
-              Je suis Jonathan, un étudiant en 3ème année d'Ingénierie Informatique à EFREI Paris, passionné par 
-              le Big Data et le Machine Learning. Curieux et motivé, j'aime transformer des données en informations 
-              exploitables et construire des modèles prédictifs pour résoudre des problèmes concrets avec des solutions évolutives.
+              Étudiant en ingénierie informatique à l'EFREI Paris, en majeure Business Intelligence & Analytics, 
+              je me spécialise dans l'exploitation des données pour en faire des leviers de décision et d'innovation.
+              Passionné par l'univers de la donnée, j'aime transformer des volumes complexes d'informations en solutions 
+              concrètes et intelligentes, alliant rigueur analytique et esprit critique.
             </p>
           </div>
 
@@ -42,9 +44,13 @@ const About = () => {
               <h3 className="text-xl font-bold">Ce que je fais</h3>
             </div>
             <p className="text-gray-300">
-              Je me spécialise dans l'analyse de données, le développement de modèles d'apprentissage automatique et 
-              la création de solutions logicielles. J'ai une solide base en programmation avec plusieurs langages et 
-              technologies, avec une forte affinité pour Python et les bibliothèques d'analyse de données et de machine learning.
+              Mes expériences académiques et projets m'ont permis de travailler sur des problématiques variées : 
+              analyse prédictive, data engineering, machine learning supervisé et non supervisé, computer vision 
+              et visualisation de données. Découvrez mes réalisations sur mon{" "}
+              <a href="https://github.com/Yeto4president" target="_blank" rel="noopener noreferrer" 
+                 className="text-theme-primary hover:text-theme-secondary transition-colors underline">
+                GitHub
+              </a>.
             </p>
           </div>
 
@@ -56,32 +62,16 @@ const About = () => {
               <h3 className="text-xl font-bold">Mon parcours</h3>
             </div>
             <p className="text-gray-300">
-              Actuellement en 3ème année à EFREI Paris, je recherche un stage de 20 semaines en Big Data et 
-              Machine Learning débutant le 4 novembre 2025. Mon parcours académique m'a permis de développer des 
-              compétences techniques solides et une passion pour l'exploitation des données à grande échelle.
+              Mon parcours académique m'a permis de développer des compétences techniques solides et une passion 
+              pour l'exploitation des données à grande échelle. Je crois que la technologie n'est pas seulement 
+              du code — c'est de l'impact. J'aime construire des solutions qui allient rigueur technique et besoins concrets.
             </p>
           </div>
         </div>
 
         <div className="mt-16">
-          <h3 className="text-2xl font-bold mb-6 text-center">Mes compétences</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {skills.map((skillGroup, index) => (
-              <div key={index} className="glass-effect rounded-lg p-6">
-                <h4 className="text-xl font-bold mb-4 text-theme-primary">{skillGroup.category}</h4>
-                <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((skill, skillIndex) => (
-                    <span 
-                      key={skillIndex} 
-                      className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <h3 className="text-2xl font-bold mb-6 text-center">Mon arsenal technique</h3>
+          <InteractiveSkills />
         </div>
       </div>
     </section>

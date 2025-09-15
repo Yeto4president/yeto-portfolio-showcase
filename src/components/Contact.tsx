@@ -8,19 +8,20 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold mb-2">
-            Contactez-<span className="text-gradient">moi</span>
+            Contact<span className="text-gradient">ez-moi</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-theme-primary to-theme-secondary mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            N'hésitez pas à me contacter si vous cherchez un développeur spécialisé en Big Data et Machine Learning, avez une question ou souhaitez simplement échanger sur le domaine.
+            Passionné par l'innovation et l'impact technologique, je suis toujours ouvert 
+            aux discussions sur les projets data, l'intelligence artificielle et les opportunités de collaboration.
           </p>
         </div>
 
         <div className="glass-effect rounded-lg p-8 max-w-xl mx-auto">
           <h3 className="text-2xl font-bold mb-6">Mes coordonnées</h3>
           <p className="text-gray-300 mb-8">
-            Je suis actuellement à la recherche d'un stage de 20 semaines en Big Data et Machine Learning à partir du 4 novembre 2025.
-            Si mon profil vous intéresse ou si vous souhaitez discuter, n'hésitez pas à me contacter.
+            Toujours curieux d'apprendre et de relever de nouveaux défis. Du notebook Python aux projets full-stack, 
+            je vois chaque défi comme une opportunité de grandir et d'innover.
           </p>
 
           <div className="space-y-6">

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import TypingAnimation from './TypingAnimation';
+import CodeTerminal from './CodeTerminal';
 
 const Hero = () => {
   return (
@@ -30,8 +31,8 @@ const Hero = () => {
                 />
               </h2>
               <p className="text-gray-300 text-lg max-w-xl">
-                Étudiant en 3ème année d'Ingénierie Informatique à EFREI Paris, 
-                je recherche un stage de 20 semaines en Big Data et Machine Learning à partir du 4 novembre 2025.
+                Étudiant en ingénierie informatique à l'EFREI Paris, en majeure Business Intelligence & Analytics, 
+                je me spécialise dans l'exploitation des données pour en faire des leviers de décision et d'innovation.
               </p>
             </div>
             
@@ -45,6 +46,9 @@ const Hero = () => {
                 <a href="#contact">Me contacter</a>
               </Button>
             </div>
+
+            {/* Interactive Code Terminal */}
+            <CodeTerminal className="mt-6 max-w-md" />
           </div>
           
           <div 
