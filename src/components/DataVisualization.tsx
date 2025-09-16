@@ -6,10 +6,10 @@ const DataVisualization = () => {
   const [animatedValues, setAnimatedValues] = useState([0, 0, 0, 0]);
 
   const metrics = [
-    { icon: Database, label: "Projets GitHub", value: 20, unit: "+", color: "bg-blue-500" },
-    { icon: BarChart3, label: "Langages Maîtrisés", value: 7, unit: "", color: "bg-green-500" },
-    { icon: TrendingUp, label: "Commits cette année", value: 340, unit: "", color: "bg-purple-500" },
-    { icon: Cpu, label: "Années d'études", value: 3, unit: "", color: "bg-orange-500" }
+    { icon: Database, label: "Projets GitHub", value: 21, unit: "", color: "bg-blue-500" },
+    { icon: BarChart3, label: "Langues Pratiquées", value: 3, unit: "", color: "bg-green-500" },
+    { icon: TrendingUp, label: "Années de Basket", value: 13, unit: "", color: "bg-purple-500" },
+    { icon: Cpu, label: "Années d'études", value: 4, unit: "", color: "bg-orange-500" }
   ];
 
   useEffect(() => {
