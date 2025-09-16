@@ -9,72 +9,191 @@ const CodeEditor = () => {
 
   const codeExamples = [
     {
-      language: 'Python',
+      language: 'Python - ML',
       code: `import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import IsolationForest
+import numpy as np
 
-# Load and prepare data
-df = pd.read_csv('basketball_stats.csv')
-X = df[['points', 'rebounds', 'assists']]
-y = df['mvp_candidate']
+# Détection d'anomalies dans les données financières
+df = pd.read_csv('transactions.csv')
+features = ['amount', 'frequency', 'location_risk']
 
-# Train model
-X_train, X_test, y_train, y_test = train_test_split(X, y)
-model = RandomForestClassifier(n_estimators=100)
-model.fit(X_train, y_train)
+# Modèle de détection d'anomalies
+model = IsolationForest(contamination=0.1, random_state=42)
+anomalies = model.fit_predict(df[features])
 
-print(f"Accuracy: {model.score(X_test, y_test):.2%}")`,
-      output: `Model training complete! 🏀
-Accuracy: 94.7%
-Top features: ['points', 'assists', 'rebounds']
-Next: Deploy to production pipeline`
+# Analyse des résultats
+fraud_cases = df[anomalies == -1]
+print(f"🚨 {len(fraud_cases)} transactions suspectes détectées")
+print(f"Montant total: {fraud_cases['amount'].sum():,.2f}€")`,
+      output: `🚨 247 transactions suspectes détectées
+Montant total: 1,847,392.50€
+Precision: 94.2% | Recall: 87.8%
+💡 Modèle prêt pour la production!`
     },
     {
-      language: 'SQL',
-      code: `-- Basketball analytics query
+      language: 'SQL - Analytics',
+      code: `-- Analyse de cohort pour l'e-commerce
+WITH user_cohorts AS (
+  SELECT 
+    user_id,
+    DATE_TRUNC('month', first_purchase) as cohort_month,
+    DATE_TRUNC('month', purchase_date) as purchase_month
+  FROM user_purchases
+),
+cohort_data AS (
+  SELECT 
+    cohort_month,
+    purchase_month,
+    COUNT(DISTINCT user_id) as users,
+    EXTRACT(EPOCH FROM purchase_month - cohort_month) / 2629746 as period
+  FROM user_cohorts
+  GROUP BY 1, 2
+)
 SELECT 
-  player_name,
-  AVG(points) as avg_points,
-  AVG(rebounds) as avg_rebounds,
-  AVG(assists) as avg_assists,
-  COUNT(*) as games_played
-FROM game_stats 
-WHERE season = '2023-24'
-  AND position = 'PG'
-GROUP BY player_name
-HAVING games_played > 20
-ORDER BY avg_points DESC
-LIMIT 10;`,
-      output: `Query executed successfully! 📊
-10 rows returned
-Execution time: 0.043s
-Top PG: Stephen Curry (29.5 PPG)`
+  cohort_month,
+  period,
+  users,
+  ROUND(100.0 * users / FIRST_VALUE(users) OVER (
+    PARTITION BY cohort_month ORDER BY period
+  ), 2) as retention_rate
+FROM cohort_data
+ORDER BY cohort_month, period;`,
+      output: `📊 Analyse de rétention terminée
+Cohorte Jan 2024: 78% retention mois 3
+Cohorte Feb 2024: 82% retention mois 3  
+📈 +15% vs période précédente
+💎 Insight: Users from Q1 more loyal!`
     },
     {
-      language: 'JavaScript',
-      code: `// Real-time data pipeline
-const analyzeGameData = async (gameData) => {
-  const predictions = await model.predict({
-    playerStats: gameData.stats,
-    matchup: gameData.opponent,
-    venue: gameData.home ? 'home' : 'away'
-  });
-  
-  const insights = {
-    winProbability: predictions.winChance,
-    keyPlayers: findKeyPlayers(gameData),
-    strategy: generateStrategy(predictions)
+      language: 'Python - Computer Vision',
+      code: `import cv2
+import numpy as np
+from tensorflow.keras.models import load_model
+
+# Classification d'images avec CNN
+def analyze_waste_bin(image_path):
+    # Chargement et preprocessing
+    img = cv2.imread(image_path)
+    img = cv2.resize(img, (224, 224))
+    img = np.expand_dims(img / 255.0, axis=0)
+    
+    # Prédiction
+    model = load_model('waste_classifier.h5')
+    predictions = model.predict(img)
+    
+    classes = ['Vide', 'Mi-plein', 'Plein', 'Débordant']
+    confidence = np.max(predictions)
+    predicted_class = classes[np.argmax(predictions)]
+    
+    return predicted_class, confidence
+
+result, conf = analyze_waste_bin('bin_image.jpg')
+print(f"📸 État: {result} (confiance: {conf:.1%})")`,
+      output: `📸 État: Plein (confiance: 92.3%)
+🚨 Alerte envoyée aux équipes
+📍 Localisation: Bin #247, Rue de Rivoli
+⏰ Collecte programmée dans 2h`
+    },
+    {
+      language: 'JavaScript - Data Viz',
+      code: `// Dashboard interactif avec D3.js
+const createInteractiveDashboard = (data) => {
+  const svg = d3.select('#dashboard')
+    .append('svg')
+    .attr('width', 800)
+    .attr('height', 600);
+
+  // Graphique en temps réel
+  const updateChart = () => {
+    const circles = svg.selectAll('circle')
+      .data(data.metrics)
+      .enter()
+      .append('circle')
+      .attr('cx', (d, i) => i * 100 + 50)
+      .attr('cy', d => 300 - d.value * 2)
+      .attr('r', d => d.importance * 10)
+      .attr('fill', d => d.color)
+      .on('mouseover', showTooltip)
+      .on('mouseout', hideTooltip);
   };
   
-  return insights;
+  // Animation des transitions
+  setInterval(updateChart, 2000);
+  
+  return { update: updateChart };
 };
 
-console.log('🔥 Pipeline ready for game analysis!');`,
-      output: `Pipeline initialized! 🚀
-Processing real-time data...
-Win probability: 76.3%
-Key insight: Focus on 3-point defense`
+console.log('📊 Dashboard interactif initialisé!');`,
+      output: `📊 Dashboard interactif initialisé!
+🔄 Mise à jour automatique: ON
+📈 Métriques en temps réel: 5 KPIs
+👆 Interactions: Hover & Click ready
+🎨 Animations fluides activées`
+    },
+    {
+      language: 'Python - ETL Pipeline',
+      code: `import apache_beam as beam
+from apache_beam.options.pipeline_options import PipelineOptions
+
+# Pipeline ETL pour Big Data
+def run_etl_pipeline():
+    options = PipelineOptions([
+        '--runner=DataflowRunner',
+        '--project=my-gcp-project'
+    ])
+    
+    with beam.Pipeline(options=options) as pipeline:
+        (pipeline
+         | 'Read CSV' >> beam.io.ReadFromText('gs://bucket/data/*.csv')
+         | 'Parse JSON' >> beam.Map(lambda x: json.loads(x))
+         | 'Clean Data' >> beam.Map(clean_and_validate)
+         | 'Aggregate' >> beam.GroupBy('category')
+         | 'Transform' >> beam.Map(calculate_metrics)
+         | 'Write to BigQuery' >> beam.io.WriteToBigQuery(
+             table='dataset.processed_data',
+             create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED
+         ))
+
+run_etl_pipeline()
+print("🚀 Pipeline ETL déployé avec succès!")`,
+      output: `🚀 Pipeline ETL déployé avec succès!
+📊 Données traitées: 2.3M lignes
+⚡ Temps d'exécution: 4m 23s
+💾 Stockage BigQuery: Mis à jour
+📈 Prêt pour les analyses BI`
+    },
+    {
+      language: 'R - Statistical Analysis',
+      code: `# Analyse statistique avancée
+library(tidyverse)
+library(caret)
+library(corrplot)
+
+# Analyse exploratoire des données
+data <- read.csv("player_performance.csv")
+
+# Test de normalité et transformations
+shapiro_results <- data %>%
+  select_if(is.numeric) %>%
+  map_dfr(~ broom::tidy(shapiro.test(.x)), .id = "variable")
+
+# Régression multiple avec validation croisée
+model <- train(performance_score ~ ., 
+               data = data,
+               method = "lm",
+               trControl = trainControl(method = "cv", number = 10))
+
+# Visualisation des corrélations
+cor_matrix <- cor(data[sapply(data, is.numeric)])
+corrplot(cor_matrix, method = "color")
+
+print(paste("R² ajusté:", round(summary(model)$adj.r.squared, 3)))`,
+      output: `📊 Analyse statistique terminée!
+R² ajusté: 0.847
+🎯 Variables significatives: 6/12
+📈 Performance modèle: Excellente
+🔍 Corrélations fortes identifiées`
     }
   ];
 

@@ -6,10 +6,10 @@ const DataVisualization = () => {
   const [animatedValues, setAnimatedValues] = useState([0, 0, 0, 0]);
 
   const metrics = [
-    { icon: Database, label: "Data Processed", value: 2.5, unit: "TB", color: "bg-blue-500" },
-    { icon: BarChart3, label: "Models Trained", value: 47, unit: "", color: "bg-green-500" },
-    { icon: TrendingUp, label: "Accuracy Rate", value: 94.7, unit: "%", color: "bg-purple-500" },
-    { icon: Cpu, label: "Projects Deployed", value: 12, unit: "", color: "bg-orange-500" }
+    { icon: Database, label: "Projets GitHub", value: 20, unit: "+", color: "bg-blue-500" },
+    { icon: BarChart3, label: "Langages Maîtrisés", value: 7, unit: "", color: "bg-green-500" },
+    { icon: TrendingUp, label: "Commits cette année", value: 340, unit: "", color: "bg-purple-500" },
+    { icon: Cpu, label: "Années d'études", value: 3, unit: "", color: "bg-orange-500" }
   ];
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const DataVisualization = () => {
     <div className="glass-effect rounded-lg p-6 mt-8">
       <h3 className="text-xl font-bold mb-6 text-center flex items-center justify-center gap-2">
         <BarChart3 className="text-theme-primary" />
-        Analytics en temps réel
+        Statistiques personnelles
       </h3>
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
