@@ -2,6 +2,8 @@
 import React from 'react';
 import { Code, User, Briefcase, Laptop } from 'lucide-react';
 import InteractiveSkills from './InteractiveSkills';
+import DataVisualization from './DataVisualization';
+import CodeEditor from './CodeEditor';
 
 const About = () => {
   const skills = [
@@ -29,10 +31,15 @@ const About = () => {
               <h3 className="text-xl font-bold">Qui je suis</h3>
             </div>
             <p className="text-gray-300">
-              Étudiant en ingénierie informatique à l'EFREI Paris, en majeure Business Intelligence & Analytics, 
+              🎓 Étudiant en ingénierie informatique à l'EFREI Paris, en majeure Business Intelligence & Analytics, 
               je me spécialise dans l'exploitation des données pour en faire des leviers de décision et d'innovation.
-              Passionné par l'univers de la donnée, j'aime transformer des volumes complexes d'informations en solutions 
-              concrètes et intelligentes, alliant rigueur analytique et esprit critique.
+              <br /><br />
+              💡 J'aime transformer des volumes complexes d'informations en solutions concrètes et intelligentes, 
+              alliant rigueur analytique et esprit critique — que ce soit pour prédire des résultats, concevoir des 
+              pipelines évolutifs ou créer des tableaux de bord qui facilitent la prise de décision.
+              <br /><br />
+              🏀 En dehors de l'écran, vous me trouverez probablement sur un terrain de basket (Kobe forever 🐍), 
+              derrière un piano 🎹, ou en train de relever de nouveaux défis qui me poussent hors de ma zone de confort.
             </p>
           </div>
 
@@ -62,9 +69,11 @@ const About = () => {
               <h3 className="text-xl font-bold">Mon parcours</h3>
             </div>
             <p className="text-gray-300">
-              Mon parcours académique m'a permis de développer des compétences techniques solides et une passion 
-              pour l'exploitation des données à grande échelle. Je crois que la technologie n'est pas seulement 
-              du code — c'est de l'impact. J'aime construire des solutions qui allient rigueur technique et besoins concrets.
+              🌍 Je crois que la technologie n'est pas seulement du code — c'est de l'impact. J'aime construire 
+              des solutions qui allient rigueur technique et besoins concrets.
+              <br /><br />
+              🚀 Toujours curieux, toujours en apprentissage. Des notebooks Python aux projets full-stack, 
+              je vois chaque défi comme une opportunité de grandir et d'innover.
             </p>
           </div>
         </div>
@@ -73,6 +82,12 @@ const About = () => {
           <h3 className="text-2xl font-bold mb-6 text-center">Mon arsenal technique</h3>
           <InteractiveSkills />
         </div>
+
+        {/* Interactive Data Demo */}
+        <DataVisualization />
+        
+        {/* Live Code Editor */}
+        <CodeEditor />
       </div>
     </section>
   );
